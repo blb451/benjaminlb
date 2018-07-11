@@ -111,6 +111,9 @@ injectGlobal`
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    margin: auto 0;
+    padding: 20px;
+    box-sizing: border-box;
   }
 
   ol, ul {
@@ -216,7 +219,7 @@ injectGlobal`
     font-weight: 400;
     line-height: ${lineHeight.base};
     color: ${colors.black};
-    background: ${colors.white};
+    background: ${colors.background};
   }
 
   body > div.root {

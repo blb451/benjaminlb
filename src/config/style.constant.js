@@ -6,12 +6,15 @@ export const colors = {
   lightGrey: '#F0F0F0',
   grey: '#d6d6d6',
   darkerGrey: '#7d8284',
-  background: '#8e9eab',
-  error: 'tomato',
+  primary: '#3E454C',
+  secondary: '#FF7F66',
+  background: '#FFF6E5',
+  decoration: '#e4542b',
 };
 
 export const lineHeight = {
   base: 1.642821,
+  title: 0.9,
   decay: 0.2019217,
 };
 
@@ -33,6 +36,7 @@ export const fontWeights = {
   normal: '400',
   medium: '500',
   bold: '700',
+  xBold: '800',
 };
 
 export const breakpoints = {

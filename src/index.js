@@ -1,3 +1,3 @@
-import renderApp from 'root';
+import renderApp from 'component/root';
 
 renderApp();
