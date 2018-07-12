@@ -1,7 +1,7 @@
 # Head's Up
 
-This codebase is still very much a work in progress!
-Feel free to make a PR
+This codebase is still very much a work in progress.
+Feel free to make a PR!
 
 ## TODO
 
