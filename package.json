@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.0-14",
+    "@fortawesome/free-brands-svg-icons": "^5.1.0-11",
+    "@fortawesome/free-regular-svg-icons": "^5.1.0-11",
+    "@fortawesome/react-fontawesome": "0.1.0-11",
     "axios": "^0.18.0",
     "history": "^4.7.2",
     "prop-types": "^15.6.1",
@@ -12,6 +16,7 @@
     "react-hot-loader": "^4.2.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
+    "react-transition-group": "^2.4.0",
     "styled-components": "^3.3.0"
   },
   "devDependencies": {
@@ -49,8 +54,7 @@
     "dev": "webpack-dev-server --mode development --open --config webpack.dev.js --hot",
     "lint": "./node_modules/.bin/eslint . --ext .js,.jsx",
     "lint:fix": "./node_modules/.bin/eslint --fix . --ext .js,.jsx",
-    "prettier":
-      "./node_modules/.bin/prettier --single-quote --trailing-comma=all --write ./src/**/*.{js,jsx}"
+    "prettier": "./node_modules/.bin/prettier --single-quote --trailing-comma=all --write ./src/**/*.{js,jsx}"
   },
   "author": "",
   "license": "ISC"

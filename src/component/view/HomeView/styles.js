@@ -1,5 +1,6 @@
 // Modules
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Constants
 import { colors, lineHeight, fontSizes, fontWeights, breakpoints } from 'config/style.constant';
@@ -26,7 +27,7 @@ export const Title = styled.h2`
 
 export const Label = styled.div`
   text-transform: uppercase;
-  font-size: ${fontSizes.xSmall}em;
+  font-size: ${fontSizes.xxSmall}em;
   font-weight: ${fontWeights.bold};
   font-family: 'Open Sans', sans-serif;
   line-height: ${lineHeight.title}em;
@@ -34,12 +35,26 @@ export const Label = styled.div`
   color: ${colors.secondary};
   margin: 0;
   padding: 0;
+
+  @media screen and (max-width: ${breakpoints.xxSmall}px) {
+    font-size: 30px;
+  }
 `;
 
 export const Text = styled.p`
   font-family: 'Open Sans', sans-serif;
   font-size: ${fontSizes.normal}em;
   margin: 1em 0;
+`;
+
+export const CodeLink = styled.a`
+  font-weight: ${fontWeights.bold};
+
+  &:hover {
+    color: ${colors.decoration};
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+  }
 `;
 
 export const Base = styled.div`
@@ -64,7 +79,7 @@ export const Left = styled.div`
   padding-right: 30px;
   min-width: 280px;
 
-  @media screen and (max-width: ${breakpoints.small}px) {
+  @media screen and (max-width: ${breakpoints.xxSmall}px) {
     padding: 0;
     width: 100%;
   }
@@ -77,8 +92,12 @@ export const Right = styled.div`
   padding-left: 30px;
   min-width: 280px;
 
-  @media screen and (max-width: ${breakpoints.small}px) {
+  @media screen and (max-width: ${breakpoints.medium}px) {
     padding: 0;
+    margin-bottom: 200px;
+  }
+
+  @media screen and (max-width: ${breakpoints.xxSmall}px) {
     width: 100%;
   }
 `;
@@ -88,6 +107,16 @@ export const Centered = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  @media screen and (max-width: ${breakpoints.medium}px) {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  @media screen and (max-width: ${breakpoints.xxSmall}px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `;
 
 export const IconContainer = styled.div`
@@ -101,6 +130,11 @@ export const IconContainer = styled.div`
     transition-timing-function: ease-in-out;
     transition-duration: 0.3s;
     border-color: ${props => props.hoverColor || colors.secondary};
+    background: ${props => props.hoverColor || colors.secondary};
+  }
+
+  @media screen and (max-width: ${breakpoints.xxSmall}px) {
+    margin-right: 3px;
   }
 `;
 
@@ -109,18 +143,35 @@ export const Icon = styled.img`
   width: auto;
 `;
 
-export const Decoration = styled.div`
-  width: 100%;
-  height: 75px;
-  left: 0px;
-  bottom: 0px;
+export const Contact = styled.div`
+  margin-top: 80px;
+
+  @media screen and (max-width: ${breakpoints.xSmall}px) {
+    position: absolute;
+    bottom: 90px;
+  }
+
+  @media screen and (max-width: ${breakpoints.xxSmall}px) {
+    align-self: center;
+  }
+`;
+
+export const ContactLinks = styled.div`
+  display: flex;
   margin-top: 20px;
-  position: relative;
-  content: '';
-  position: absolute;
-  background: linear-gradient(135deg, ${colors.background} 25%, transparent 25%) -64px 0,
-    linear-gradient(225deg, ${colors.background} 25%, transparent 25%) -64px 0,
-    linear-gradient(45deg, transparent 25%, transparent 25%);
-  background-size: 128px 128px;
-  background-color: ${colors.decoration};
+  width: 100%;
+  @media screen and (max-width: ${breakpoints.xxSmall}px) {
+    justify-content: center;
+  }
+`;
+
+export const ContactIcon = styled(FontAwesomeIcon)`
+  margin-right: 25px;
+  cursor: pointer;
+
+  &:hover {
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+    color: ${colors.decoration};
+  }
 `;

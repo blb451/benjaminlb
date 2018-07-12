@@ -113,7 +113,9 @@ injectGlobal`
     -moz-osx-font-smoothing: grayscale;
     margin: auto 0;
     padding: 20px;
+    padding-bottom: 80px;
     box-sizing: border-box;
+    position: relative;
   }
 
   ol, ul {
